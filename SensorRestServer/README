@@ -1,0 +1,35 @@
+Pipeline Setup
+==============================
+
+Setup the Sensor Analyzer Project and Kafka first
+
+
+Rest Server Setup
+=============================
+
+[Install sbt] (http://www.scala-sbt.org/release/tutorial/Setup.html)
+
+Modify the configuration to point to the kafka server by changing application.conf
+
+Build the server  -  sbt compile
+
+Run the server - sbt run
+
+Deploying the Rest Server
+================================
+
+On local machine:
+
+sbt dist
+
+scp -i /apps/demo_rsa target/universal/sensorrestserver-0.1.0.zip root@52.8.36.105:
+
+On remote machine:
+
+unzip sensorrestserver-0.1.0.zip
+
+cd sensorrestserver-0.1.0
+
+mkdir runlogs
+
+nohup bin/sensorrestserver -Dhttp.port=10000 > runlogs/restServer.log 2> runlogs/restServer.err < /dev/null &

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="69dp"
+        android:text="Welcome to Accelerometer!"
+        android:id="@+id/welcomeMessage"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="20dp"
+        android:textSize="28dp"
+        android:textIsSelectable="false" />
+
+    <TextView
+        android:layout_width="351dp"
+        android:layout_height="25dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Please enter Rest Api URL:"
+        android:id="@+id/urlEditLabel"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="10dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editURL"
+        android:text="http://52.8.36.105:10000"
+        android:layout_marginTop="30dp"
+        android:layout_weight="0.17" />
+
+    <TextView
+        android:layout_width="351dp"
+        android:layout_height="36dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="User ID:"
+        android:id="@+id/userIDEditLabel"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/userID"
+        android:text="ryan"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.17" />
+
+    <TextView
+        android:layout_width="351dp"
+        android:layout_height="36dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Notes about activity:"
+        android:id="@+id/notesEditLabel"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notesID"
+        android:text=""
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.17" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/button_start"
+        android:layout_weight="0.07"
+        android:layout_marginTop="50dp" />
+</LinearLayout>
